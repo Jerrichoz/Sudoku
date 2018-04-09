@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1523264867 source:c:\users\teilnehmer\desktop\sodoku\function.c
+
+1523265159 source:c:\users\teilnehmer\desktop\sodoku\main.c
+	<stdio.h>
+	<stdlib.h>
+
