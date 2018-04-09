@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1523264867 source:c:\users\teilnehmer\desktop\sodoku\function.c
+
+1523265159 source:c:\users\teilnehmer\desktop\sodoku\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1523313893 source:c:\users\maks\desktop\programmier-projekt\sudoku-master\sodoku\function.c
+
+1523314295 source:c:\users\maks\desktop\programmier-projekt\sudoku-master\sodoku\main.c
+	<stdio.h>
+	<stdlib.h>
+	"header.h"
+
+1523314349 c:\users\maks\desktop\programmier-projekt\sudoku-master\sodoku\header.h
+
