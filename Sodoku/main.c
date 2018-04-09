@@ -4,9 +4,13 @@
 int main()
 {
     //Testarray erstellen
-    int TestGame[9][9];
 
+    int TestGame[9][9];
     int i = 0;
+    int j = 0;
+    int Number1;
+    int Number2;
+
     for(i = 0; i < 9; i++)
     {
         for(j = 0; j < 9; j++)
@@ -23,8 +27,13 @@ int main()
     SetField(0,2,TestGame,5);
     SetField(1,2,TestGame,4);
     SetField(7,2,TestGame,7);
-    //SetField()
+    SetField(8,2,TestGame,6);
 
-    printf("Hello world!\n");
+    scanf("%i", &Number1);
+    scanf("%i", &Number2);
+
+    printf("%i\n",GetField(Number1,Number2,TestGame));
+    GenerateField(TestGame);
+
     return 0;
 }
