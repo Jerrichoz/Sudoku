@@ -1,38 +1,66 @@
-int SetField(int xCoordinate, int yCoordinate, int Array[9][9],int Number)
+#include <windows.h>
+#include "header.h"
+
+int SetSodokuField(int xCoordinate, int yCoordinate, SF GameFields[9][9],int Number)
 {
-    Array[xCoordinate][yCoordinate] = Number;
+    (GameFields[xCoordinate][yCoordinate]).Number = Number;
     return 0;
 }
 
-int GetField(int xCoordinate, int yCoordinate, int Array[9][9])
+int GetSodokuField(int xCoordinate, int yCoordinate, SF GameFields[9][9])
 {
-    return Array[xCoordinate][yCoordinate];
+    return GameFields[xCoordinate][yCoordinate].Number;
 }
 
-int GenerateField(int Array[9][9])
+int GenerateField(SF GameFields[9][9])
 {
-    printf("Test5\n");
     int i = 0;
     int j = 0;
-    //Gitterkonstrukt - Anfang
-    printf("+---+---+---+\n");
-    for(i = 1; i <= 9; i++)
+    //Top border of the Grid
+    printf("+-------+-------+-------+\n");
+    //2 Loops, for generating the Field based of the Array GameFields.
+
+    //Loop for the columns
+    for(i = 0; i <= 8; i++)
     {
         printf("|");
-        for(j = 1; j <= 9; j++)
+        //Loop for the rows
+        for(j = 0; j <= 8; j++)
         {
-            printf("%i",Array[j][i]);
-            if((j%3) == 0)
+            //"." Should be displayed instead of 0
+//            if (GameFields[j][i].Number == 0)
+//            {
+//                printf(" .");
+//            }
+//            else
+//            {
+                //Farbe per Funktion setzen NOT FINISHED YET
+
+                if(1 == 1)
+                {
+
+                    GameFields[j][i].Color = 2;
+
+                    printf(" %i",GameFields[j][i]);
+
+                    GameFields[j][i].Color = 7;
+                }
+//            }
+            //Formating for Layout
+            if((j==2)||(j==5))
             {
-                printf("|");
+                printf(" |");
             }
         }
-        printf("\n");
-        if((i%3) == 0)
+        printf(" |\n");
+        if((i==2)||(i==5))
         {
-            //Gitterkonstrukt - Ende
-            printf("+---+---+---+\n");
+            //
+            printf("+-------+-------+-------+\n");
         }
     }
+    printf("+-------+-------+-------+\n");
     return 0;
 }
+
+
